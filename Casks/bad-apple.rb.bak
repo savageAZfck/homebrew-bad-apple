@@ -1,7 +1,7 @@
 cask "bad-apple" do
   version "0.1.0"
   # Update this sha256 for each release. package_homebrew_cask.sh does it automatically.
-  sha256 "36453010b7e5b9dbd2bfb46f1d9523132139516a8c62aeb9034ad3f74811ba1b"
+  sha256 "cc8e117fd5e4e84b69ff0ecf5fc45ac5146cefc1b725584e82b6dcefcdb0d573"
 
   url "https://github.com/savageAZfck/bad-apple-releases/releases/download/v#{version}/Bad_Apple-#{version}-unsigned.zip"
   name "Bad Apple"
@@ -61,8 +61,6 @@ cask "bad-apple" do
       xattr -dr com.apple.quarantine "/Applications/Bad Apple.app"
 
     The system daemons are installed during this cask. The 7B model is
-    downloaded on first use only if you allow downloads in the menu bar or set
-    BADAPPLE_ALLOW_DOWNLOADS=1. For an air-gap install, seed the model cache
-    before the first query.
+    downloaded on first use.
   EOS
 end
